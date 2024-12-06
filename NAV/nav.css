@@ -1,0 +1,61 @@
+body
+{
+    margin: 0;
+    font-family: sans-serif;
+}
+.hero
+{
+    /*sizing*/
+    width: 100vw;
+    height: 100vh;
+
+    /*flexbox stuff*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /*text styles*/
+    text-align: center;
+    color: white;
+
+    /*background styles*/
+    background-image: url('https://www.elfinancierocr.com/resizer/v2/2QOT565I4JHD7LFL6N3CITQ5P4.jpg?smart=true&auth=c18a0e11ca92e946535994919aa1204c3527b49e579406d179fc366002f1428a&width=1000&height=741');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.hero h1
+{
+    /*text styles*/
+    font-size: 5em;
+    text-shadow: 2px 2px 4px white;
+    /*margins*/
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    }
+    .hero.btn
+    {
+        /*positioning and sizing*/
+        display: block;
+        width: 200px;
+        /*padding and margins*/
+        padding: 1em;
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        /*text styles*/
+        color:white;
+        text-decoration: none;
+        font-size: 1.5em;
+        /*border styles*/
+        border: 3px solid white;
+        border-radius: 20px;
+        background: paleturquoise;
+    }
+    main
+    {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 100px;
+    }

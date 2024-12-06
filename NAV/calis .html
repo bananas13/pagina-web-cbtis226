@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .formulario-contacto {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+        .formulario-contacto input, .formulario-contacto button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .formulario-contacto button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .formulario-contacto button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="formulario-contacto">
+        <form>
+            <div class="mb-3">
+                <label for="correoElectronico" class="form-label">Ingresa tu email</label>
+                <input type="email" class="form-control" id="correoElectronico" aria-describedby="ayudaCorreo">
+                <div id="ayudaCorreo" class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
+            </div>
+            <div class="mb-3">
+                <label for="contrasena" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="contrasena">
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="mostrarContrasena" onclick="mostrarOcultarContrasena()">
+                <label class="form-check-label" for="mostrarContrasena">Mirar contraseña</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        function mostrarOcultarContrasena() {
+            var campoContrasena = document.getElementById("contrasena");
+            if (campoContrasena.type === "password") {
+                campoContrasena.type = "text";
+            } else {
+                campoContrasena.type = "password";
+            }
+        }
+    </script>
+</body>
+</html>

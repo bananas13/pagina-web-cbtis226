@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería de Imágenes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 20px;
+    }
+    .gallery img {
+      margin: 10px;
+      width: 300px;
+      height: auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s;
+    }
+    .info-box {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+    }
+    .info-box button {
+      display: block;
+      margin: 20px auto 0;
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="text-align: center;">Galería de Imágenes</h1>
+  <div class="gallery">
+    <img src="monster dragon tea.jpg" alt="Imagen 1" onclick="showInfo('Información de la Imagen 1')">
+    <img src="monster java.jpg" alt="Imagen 2" onclick="showInfo('Información de la Imagen 2')">
+    <img src="monster mango loco.jpg" alt="Imagen 3" onclick="showInfo('Información de la Imagen 3')">
+    <img src="monster ultra violet.webp" alt="Imagen 4" onclick="showInfo('Información de la Imagen 4')">
+    <!-- Añade más imágenes según necesites -->
+  </div>
+  <div id="info-box" class="info-box">
+    <p id="info-text"></p>
+    <button onclick="closeInfo()">Cerrar</button>
+  </div>
+  <script>
+    function showInfo(info) {
+      document.getElementById('info-text').textContent = info;
+      document.getElementById('info-box').style.display = 'block';
+    }
+    function closeInfo() {
+      document.getElementById('info-box').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
+
